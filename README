@@ -1,0 +1,106 @@
+Rejuvenate Spa Management System
+links to my 
+1.dbdiagram:-https://dbdiagram.io/d/683423f0b9f7446da325725f
+2.link to Demo:-
+3.github:-
+
+
+An efficient spa service management system built with FastAPI, SQLAlchemy, and a CLI.
+📌 Overview
+
+
+The Rejuvenate Spa Management System provides a robust solution for handling customers, staff, appointments, payments, inventory, and services. 
+It features a FastAPI-powered backend, SQLAlchemy ORM, and an intuitive CLI-based 
+management interface.
+🚀 Features
+
+✅ Customer Management – Add, retrieve, and list customers
+ ✅ Staff Management – View all spa staff members
+ ✅ Service Management – Add and list spa services
+  ✅ Appointment Booking – Schedule and manage appointments 
+  ✅ Payment Processing – Record payments and track transactions
+   ✅ Inventory Tracking – Manage stock levels dynamically 
+   ✅ CLI Interface – Command-line functionality for seamless management
+🛠️ Technologies Used
+
+    Python – Core programming language
+
+    FastAPI – RESTful API framework
+
+    SQLAlchemy – ORM for database management
+
+    SQLite – Database for storing records
+
+    Click – CLI-based user interaction
+
+    Uvicorn – ASGI server for running FastAPI
+
+    Alembic – Database migrations
+
+📂 Project Structure
+rejuvenate_spa/
+├── lib/
+│   ├── base.py                 # Contains SQLAlchemy Base
+│   ├── config.py               # Database connection settings
+│   ├── models/                 # Move models here
+│   │   ├── __init__.py         # Imports all models
+│   │   ├── customer.py         # Customer model
+│   │   ├── service.py          # Service model
+│   │   ├── staff.py            # Staff model
+│   │   ├── appointment.py      # Appointment model
+│   │   ├── payment.py          # Payment model
+│   │   ├── inventory.py        # Inventory model
+│   │   ├── service_inventory.py  # Service-Inventory relationship
+│   │   ├── appointment_inventory.py  # Appointment-Inventory relationship
+│   ├── seed.py                 # Move seeding script here
+├── migrations/                  # Alembic migrations
+├── cli.py                        # Command-line interface
+├── app.py                        # Main entry point
+├── debug.py                      # Debugging script
+├── README.md                     # Project documentation
+🚀 Getting Started
+1️⃣ Setup the Project
+
+Clone the repository:
+bash
+git clone <your-repo-url>
+cd rejuvenate_spa
+2️⃣ Initialize the Database
+
+Run the seed script to create and populate tables:
+bash 
+python lib/seed.py
+3️⃣ Start the FastAPI Server
+
+Run the FastAPI backend:
+bash
+uvicorn app:app --host 127.0.0.1 --port 8000 --reload
+
+4️⃣ Use CLI for Management
+
+Launch the CLI system:
+bash
+python cli.py
+From the interactive menu, you can:
+
+    Manage customers (add, retrieve, list)
+
+    Handle appointments (book, view)
+
+    Process payments (record transactions)
+
+    Track inventory (add, update stock)
+
+    View staff and services
+
+🔧 Next Improvements
+
+    Enhance error handling for invalid entries
+
+    Implement authentication for secure access
+
+    Consider a frontend integration for user-friendly interaction
+
+💡 Contributors
+
+    Elvis – Lead Developer
